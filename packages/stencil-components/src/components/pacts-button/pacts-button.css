@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+}
+
+.chain-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
