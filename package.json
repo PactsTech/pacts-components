@@ -4,6 +4,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "start-stencil": "npm run start -w @pactstech/stencil-components",
+    "build-stencil": "npm run build -w @pactstech/stencil-components"
+  },
   "devDependencies": {
     "@types/node": "^20.12.7",
     "lerna": "^8.1.2",
