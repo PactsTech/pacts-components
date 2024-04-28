@@ -5,6 +5,8 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Address, TransactionReceipt } from "viem";
+export { Address, TransactionReceipt } from "viem";
 export namespace Components {
     interface ArbitrumSvg {
     }
@@ -22,7 +24,7 @@ export namespace Components {
         /**
           * The address of the order processor
          */
-        "address": string;
+        "address": Address;
         /**
           * The name of the chain for the order processor
          */
@@ -34,7 +36,7 @@ export namespace Components {
         /**
           * Public metadata to associate with the order
          */
-        "metadata"?: string;
+        "metadata": string;
         /**
           * The order id to use
          */
@@ -42,11 +44,11 @@ export namespace Components {
         /**
           * Price of the order in token units
          */
-        "price": Number;
+        "price": bigint;
         /**
           * Shipping cost of the order in token units
          */
-        "shipping": Number;
+        "shipping": bigint;
         /**
           * Called to submit orders when button is clicked
          */
@@ -94,7 +96,7 @@ declare global {
     };
     interface HTMLPactsButtonElementEventMap {
         "submissionStarted": any;
-        "submissionSucceeded": any;
+        "submissionSucceeded": TransactionReceipt;
         "submissionErrored": Error;
     }
     interface HTMLPactsButtonElement extends Components.PactsButton, HTMLStencilElement {
@@ -163,7 +165,7 @@ declare namespace LocalJSX {
         /**
           * The address of the order processor
          */
-        "address"?: string;
+        "address"?: Address;
         /**
           * The name of the chain for the order processor
          */
@@ -187,7 +189,7 @@ declare namespace LocalJSX {
         /**
           * Event emitted when order submission succeeds
          */
-        "onSubmissionSucceeded"?: (event: PactsButtonCustomEvent<any>) => void;
+        "onSubmissionSucceeded"?: (event: PactsButtonCustomEvent<TransactionReceipt>) => void;
         /**
           * The order id to use
          */
@@ -195,11 +197,11 @@ declare namespace LocalJSX {
         /**
           * Price of the order in token units
          */
-        "price"?: Number;
+        "price"?: bigint;
         /**
           * Shipping cost of the order in token units
          */
-        "shipping"?: Number;
+        "shipping"?: bigint;
         /**
           * The token of the currency for the order processor
          */

@@ -1,13 +1,15 @@
 import { Component, Event, EventEmitter, Host, Method, Prop, h } from '@stencil/core';
-// import { MetaMaskInpageProvider } from '@metamask/providers';
-// import * as chains from 'viem/chains';
-// import { Address, createPublicClient, createWalletClient, custom } from 'viem';
+import { MetaMaskInpageProvider } from '@metamask/providers';
+import * as chains from 'viem/chains';
+import { Address, TransactionReceipt, createPublicClient, createWalletClient, custom, publicActions } from 'viem';
+import { getProcessor, setupOrder, submitOrder } from '@pactstech/pacts-viem';
+import { TransactionError } from '../../types/types';
 
-// declare global {
-//   interface Window {
-//     ethereum?: MetaMaskInpageProvider
-//   }
-// }
+declare global {
+  interface Window {
+    ethereum?: MetaMaskInpageProvider
+  }
+}
 
 @Component({
   tag: 'pacts-button',
@@ -27,7 +29,7 @@ export class PactsButton {
   /**
    * The address of the order processor
    */
-  @Prop() address: string;
+  @Prop() address: Address;
 
   /**
    * The order id to use
@@ -37,17 +39,17 @@ export class PactsButton {
   /**
    * Price of the order in token units
    */
-  @Prop() price: Number;
+  @Prop() price: bigint;
 
   /**
    * Shipping cost of the order in token units
    */
-  @Prop() shipping: Number;
+  @Prop() shipping: bigint;
 
   /**
    * Public metadata to associate with the order
    */
-  @Prop() metadata?: string;
+  @Prop() metadata: string = '{}';
 
   /**
    * Size for the chain icon
@@ -62,7 +64,7 @@ export class PactsButton {
   /**
    * Event emitted when order submission succeeds
    */
-  @Event() submissionSucceeded: EventEmitter;
+  @Event() submissionSucceeded: EventEmitter<TransactionReceipt>;
 
   /**
    * Event emitted when order submission errors
@@ -75,29 +77,40 @@ export class PactsButton {
   @Method()
   async submitOrder() {
     this.submissionStarted.emit();
-    // if (!window.ethereum) {
-    //   const error = new Error('Browser has no wallet available');
-    //   this.submissionErrored.emit(error);
-    //   return;
-    // }
-    try {
-      // const chain = chains[this.chain];
-      // const transport = custom(window.ethereum);
-      // const publicClient = createPublicClient({ chain, transport });
-      // const walletClient = createWalletClient({ chain, transport }).extend(((client) => ({
-      //   async getEncryptionKey(address) {
-      //     return client.request({ method: 'eth_getEncryptionPublicKey', params: [address] });
-      //   }
-      // })));
-      // const processor = getProcessor({ address: this.address, publicClient });
-    } catch (error) {
+    if (!window.ethereum) {
+      const error = new Error('Browser has no wallet available');
       this.submissionErrored.emit(error);
+      return;
+    }
+    try {
+      const chain = this.getChain();
+      const transport = custom(window.ethereum);
+      const publicClient = createPublicClient({ chain, transport });
+      const walletClient = createWalletClient({ chain, transport }).extend(publicActions);
+      const processor = getProcessor({ address: this.address, client: walletClient });
+      const args = await setupOrder({
+        publicClient,
+        walletClient,
+        processor,
+        orderId: this.orderId,
+        price: this.price,
+        shipping: this.shipping,
+        metadata: this.metadata
+      });
+      const hash = await submitOrder({ processor, ...args });
+      const receipt = await publicClient.waitForTransactionReceipt({ hash });
+      if (receipt.status !== 'success') {
+        throw new TransactionError({ message: 'transaction failed', receipt });
+      }
+      this.submissionSucceeded.emit(receipt);
+    } catch (error) {
+      this.submissionErrored.emit(error as Error);
     }
   }
 
   render() {
     return (
-      <Host onClick={(event) => console.log({ event })}>
+      <Host onClick={() => this.submitOrder()}>
         <div class='container'>
           <token-icon token={this.token} />
           <chain-icon class='chain-icon'
@@ -107,5 +120,13 @@ export class PactsButton {
         </div>
       </Host>
     );
+  }
+
+  private getChain() {
+    switch (this.chain) {
+      case 'arbitrum': return chains.arbitrum;
+      case 'arbitrumSepolia': return chains.arbitrumSepolia;
+      default: return chains.mainnet;
+    }
   }
 }

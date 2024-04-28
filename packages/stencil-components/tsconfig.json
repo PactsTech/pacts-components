@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
+    "strict": true,
+    "strictPropertyInitialization": false,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "declaration": false,
     "experimentalDecorators": true,
+    "skipLibCheck": true,
     "lib": [
       "dom",
       "es2017"

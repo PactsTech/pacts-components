@@ -19,7 +19,7 @@ export class ChainIcon {
     switch (this.chain) {
       case 'arbitrum':
         return <arbitrum-svg key='arbitrum' style={style} />;
-      case 'ethereum':
+      default:
         return <ethereum-svg key='ethereum' style={style} />;
     }
   }

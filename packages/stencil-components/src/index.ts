@@ -8,4 +8,5 @@
  * to consume components of this package as outlined in the `README.md`.
  */
 
+export * from './types/types';
 export type * from './components.d.ts';
