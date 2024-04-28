@@ -44,11 +44,11 @@ export namespace Components {
         /**
           * Price of the order in token units
          */
-        "price": bigint;
+        "price": string;
         /**
           * Shipping cost of the order in token units
          */
-        "shipping": bigint;
+        "shipping": string;
         /**
           * Called to submit orders when button is clicked
          */
@@ -197,11 +197,11 @@ declare namespace LocalJSX {
         /**
           * Price of the order in token units
          */
-        "price"?: bigint;
+        "price"?: string;
         /**
           * Shipping cost of the order in token units
          */
-        "shipping"?: bigint;
+        "shipping"?: string;
         /**
           * The token of the currency for the order processor
          */

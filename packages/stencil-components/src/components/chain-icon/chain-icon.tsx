@@ -18,6 +18,7 @@ export class ChainIcon {
     const style = { height: this.height, width: this.width };
     switch (this.chain) {
       case 'arbitrum':
+      case 'arbitrumSepolia':
         return <arbitrum-svg key='arbitrum' style={style} />;
       default:
         return <ethereum-svg key='ethereum' style={style} />;

@@ -14,8 +14,8 @@
 | `chainIconSize` | `chain-icon-size` | Size for the chain icon                           | `string`              | `'2rem'`    |
 | `metadata`      | `metadata`        | Public metadata to associate with the order       | `string`              | `'{}'`      |
 | `orderId`       | `order-id`        | The order id to use                               | `string \| undefined` | `undefined` |
-| `price`         | --                | Price of the order in token units                 | `bigint`              | `undefined` |
-| `shipping`      | --                | Shipping cost of the order in token units         | `bigint`              | `undefined` |
+| `price`         | `price`           | Price of the order in token units                 | `string`              | `undefined` |
+| `shipping`      | `shipping`        | Shipping cost of the order in token units         | `string`              | `undefined` |
 | `token`         | `token`           | The token of the currency for the order processor | `string`              | `undefined` |
 
 

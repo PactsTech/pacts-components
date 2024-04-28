@@ -39,12 +39,12 @@ export class PactsButton {
   /**
    * Price of the order in token units
    */
-  @Prop() price: bigint;
+  @Prop() price: string;
 
   /**
    * Shipping cost of the order in token units
    */
-  @Prop() shipping: bigint;
+  @Prop() shipping: string;
 
   /**
    * Public metadata to associate with the order
@@ -59,17 +59,17 @@ export class PactsButton {
   /**
    * Event emitted when order submission starts
    */
-  @Event() submissionStarted: EventEmitter;
+  @Event({ eventName: 'submissionStarted' }) submissionStarted: EventEmitter;
 
   /**
    * Event emitted when order submission succeeds
    */
-  @Event() submissionSucceeded: EventEmitter<TransactionReceipt>;
+  @Event({ eventName: 'submissionSucceeded' }) submissionSucceeded: EventEmitter<TransactionReceipt>;
 
   /**
    * Event emitted when order submission errors
    */
-  @Event() submissionErrored: EventEmitter<Error>;
+  @Event({ eventName: 'submissionErrored' }) submissionErrored: EventEmitter<Error>;
 
   /**
    * Called to submit orders when button is clicked
@@ -88,14 +88,15 @@ export class PactsButton {
       const publicClient = createPublicClient({ chain, transport });
       const walletClient = createWalletClient({ chain, transport }).extend(publicActions);
       const processor = getProcessor({ address: this.address, client: walletClient });
+      const metadata = JSON.parse(this.metadata);
       const args = await setupOrder({
         publicClient,
         walletClient,
         processor,
         orderId: this.orderId,
-        price: this.price,
-        shipping: this.shipping,
-        metadata: this.metadata
+        price: BigInt(this.price),
+        shipping: BigInt(this.shipping),
+        metadata
       });
       const hash = await submitOrder({ processor, ...args });
       const receipt = await publicClient.waitForTransactionReceipt({ hash });
