@@ -88,14 +88,16 @@ export class PactsButton {
       const publicClient = createPublicClient({ chain, transport });
       const walletClient = createWalletClient({ chain, transport }).extend(publicActions);
       const processor = getProcessor({ address: this.address, client: walletClient });
+      const price = BigInt(this.price);
+      const shipping = BigInt(this.shipping);
       const metadata = JSON.parse(this.metadata);
       const args = await setupOrder({
         publicClient,
         walletClient,
         processor,
         orderId: this.orderId,
-        price: BigInt(this.price),
-        shipping: BigInt(this.shipping),
+        price,
+        shipping,
         metadata
       });
       const hash = await submitOrder({ processor, ...args });
