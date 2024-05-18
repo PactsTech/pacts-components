@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/ionic-team/stencil-component-starter/compare/v1.1.2...v1.2.0) (2024-05-18)
+
+
+### Bug Fixes
+
+* chain selector styling ([95b9aef](https://github.com/ionic-team/stencil-component-starter/commit/95b9aef5df700cc9db8c207cdd6c0b27f694b3e0))
+
+
+### Features
+
+* add chain selector component ([43de59d](https://github.com/ionic-team/stencil-component-starter/commit/43de59d0c166733ce642537b88ad10835a970c1c))
+
+
+
+
+
 ## [1.1.2](https://github.com/ionic-team/stencil-component-starter/compare/v1.1.1...v1.1.2) (2024-05-18)
 
 **Note:** Version bump only for package @pactstech/stencil-components
