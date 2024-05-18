@@ -10,18 +10,13 @@ export class ChainIcon {
    */
   @Prop() chain: string;
 
-  @Prop() height = '2rem';
-
-  @Prop() width = '2rem';
-
   render() {
-    const style = { height: this.height, width: this.width };
     switch (this.chain) {
       case 'arbitrum':
       case 'arbitrumSepolia':
-        return <arbitrum-svg key='arbitrum' style={style} />;
+        return <arbitrum-svg key='arbitrum' />;
       default:
-        return <ethereum-svg key='ethereum' style={style} />;
+        return <ethereum-svg key='ethereum' />;
     }
   }
 }

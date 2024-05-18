@@ -15,14 +15,16 @@ export namespace Components {
           * The name of the chain for the order processor
          */
         "chain": string;
-        "height": string;
-        "width": string;
     }
     interface ChainSelector {
         /**
           * chain name to render
          */
         "chain": string;
+        /**
+          * Size of the icon above text
+         */
+        "iconSize": string;
     }
     interface EthereumSvg {
     }
@@ -195,14 +197,16 @@ declare namespace LocalJSX {
           * The name of the chain for the order processor
          */
         "chain"?: string;
-        "height"?: string;
-        "width"?: string;
     }
     interface ChainSelector {
         /**
           * chain name to render
          */
         "chain"?: string;
+        /**
+          * Size of the icon above text
+         */
+        "iconSize"?: string;
     }
     interface EthereumSvg {
     }

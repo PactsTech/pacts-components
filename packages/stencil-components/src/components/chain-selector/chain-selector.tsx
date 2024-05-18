@@ -3,6 +3,7 @@ import * as chains from 'viem/chains';
 
 @Component({
   tag: 'chain-selector',
+  styleUrl: 'chain-selector.css',
   shadow: true,
 })
 export class ChainSelector {
@@ -11,11 +12,19 @@ export class ChainSelector {
    */
   @Prop() chain: string;
 
+  /**
+   * Size of the icon above text
+   */
+  @Prop() iconSize = '4rem';
+
   render() {
     const chain = this.getChain();
     return (
       <Host>
-        <chain-icon chain={this.chain} />
+        <div>
+          <chain-icon chain={this.chain} class='chain-icon'
+            style={{ height: this.iconSize, width: this.iconSize }} />
+        </div>
         <span>{chain.name}</span>
       </Host>
     );

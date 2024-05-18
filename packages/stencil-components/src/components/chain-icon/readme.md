@@ -10,8 +10,6 @@
 | Property | Attribute | Description                                   | Type     | Default     |
 | -------- | --------- | --------------------------------------------- | -------- | ----------- |
 | `chain`  | `chain`   | The name of the chain for the order processor | `string` | `undefined` |
-| `height` | `height`  |                                               | `string` | `'2rem'`    |
-| `width`  | `width`   |                                               | `string` | `'2rem'`    |
 
 
 ## Dependencies
