@@ -9,8 +9,8 @@
 
 | Property   | Attribute   | Description                 | Type     | Default     |
 | ---------- | ----------- | --------------------------- | -------- | ----------- |
-| `chain`    | `chain`     | chain name to render        | `string` | `undefined` |
-| `iconSize` | `icon-size` | Size of the icon above text | `string` | `'4rem'`    |
+| `chains`   | `chains`    | Chain names to render       | `string` | `undefined` |
+| `iconSize` | `icon-size` | Size of the icon above text | `string` | `'5rem'`    |
 
 
 ## Dependencies

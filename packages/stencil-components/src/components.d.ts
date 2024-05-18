@@ -18,9 +18,9 @@ export namespace Components {
     }
     interface ChainSelector {
         /**
-          * chain name to render
+          * Chain names to render
          */
-        "chain": string;
+        "chains": string;
         /**
           * Size of the icon above text
          */
@@ -200,9 +200,9 @@ declare namespace LocalJSX {
     }
     interface ChainSelector {
         /**
-          * chain name to render
+          * Chain names to render
          */
-        "chain"?: string;
+        "chains"?: string;
         /**
           * Size of the icon above text
          */

@@ -8,30 +8,45 @@ import * as chains from 'viem/chains';
 })
 export class ChainSelector {
   /**
-   * chain name to render
+   * Chain names to render
    */
-  @Prop() chain: string;
+  @Prop() chains: string;
 
   /**
    * Size of the icon above text
    */
-  @Prop() iconSize = '4rem';
+  @Prop() iconSize = '5rem';
 
   render() {
-    const chain = this.getChain();
+    const chains = this.chains.split(',');
     return (
       <Host>
-        <div>
-          <chain-icon chain={this.chain} class='chain-icon'
-            style={{ height: this.iconSize, width: this.iconSize }} />
+        <div class='row center-xs'>
+          {chains.map((chainName) => {
+            const chain = this.getChain(chainName);
+            return (
+              <div class='col-xs'>
+                <chain-icon chain={chainName} style={{
+                  display: 'block',
+                  margin: 'auto',
+                  height: this.iconSize,
+                  width: this.iconSize
+                }} />
+                <div class='row center-xs'>
+                  <div class='col-xs'>
+                    <span>{chain.name}</span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <span>{chain.name}</span>
       </Host>
     );
   }
 
-  private getChain() {
-    switch (this.chain) {
+  private getChain(chainName: string) {
+    switch (chainName) {
       case 'arbitrum': return chains.arbitrum;
       case 'arbitrumSepolia': return chains.arbitrumSepolia;
       default: return chains.mainnet;
