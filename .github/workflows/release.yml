@@ -34,8 +34,10 @@ jobs:
       run: npm whoami
     - name: Deps
       run: npm ci
-    - name: Build
+    - name: BuildStencil
       run: npm run build-stencil
+    - name: BuildReact
+      run: npm run build-react
     - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
