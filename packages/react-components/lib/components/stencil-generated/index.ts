@@ -9,6 +9,7 @@ import type { JSX } from '@pactstech/stencil-components';
 
 export const ArbitrumSvg = /*@__PURE__*/createReactComponent<JSX.ArbitrumSvg, HTMLArbitrumSvgElement>('arbitrum-svg');
 export const ChainIcon = /*@__PURE__*/createReactComponent<JSX.ChainIcon, HTMLChainIconElement>('chain-icon');
+export const ChainSelector = /*@__PURE__*/createReactComponent<JSX.ChainSelector, HTMLChainSelectorElement>('chain-selector');
 export const EthereumSvg = /*@__PURE__*/createReactComponent<JSX.EthereumSvg, HTMLEthereumSvgElement>('ethereum-svg');
 export const PactsButton = /*@__PURE__*/createReactComponent<JSX.PactsButton, HTMLPactsButtonElement>('pacts-button');
 export const PactsIcon = /*@__PURE__*/createReactComponent<JSX.PactsIcon, HTMLPactsIconElement>('pacts-icon');

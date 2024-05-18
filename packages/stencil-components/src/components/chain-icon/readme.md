@@ -18,6 +18,7 @@
 
 ### Used by
 
+ - [chain-selector](../chain-selector)
  - [pacts-button](../pacts-button)
 
 ### Depends on
@@ -30,6 +31,7 @@
 graph TD;
   chain-icon --> arbitrum-svg
   chain-icon --> ethereum-svg
+  chain-selector --> chain-icon
   pacts-button --> chain-icon
   style chain-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```

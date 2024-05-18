@@ -18,6 +18,12 @@ export namespace Components {
         "height": string;
         "width": string;
     }
+    interface ChainSelector {
+        /**
+          * chain name to render
+         */
+        "chain": string;
+    }
     interface EthereumSvg {
     }
     interface PactsButton {
@@ -100,6 +106,12 @@ declare global {
         prototype: HTMLChainIconElement;
         new (): HTMLChainIconElement;
     };
+    interface HTMLChainSelectorElement extends Components.ChainSelector, HTMLStencilElement {
+    }
+    var HTMLChainSelectorElement: {
+        prototype: HTMLChainSelectorElement;
+        new (): HTMLChainSelectorElement;
+    };
     interface HTMLEthereumSvgElement extends Components.EthereumSvg, HTMLStencilElement {
     }
     var HTMLEthereumSvgElement: {
@@ -164,6 +176,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "arbitrum-svg": HTMLArbitrumSvgElement;
         "chain-icon": HTMLChainIconElement;
+        "chain-selector": HTMLChainSelectorElement;
         "ethereum-svg": HTMLEthereumSvgElement;
         "pacts-button": HTMLPactsButtonElement;
         "pacts-icon": HTMLPactsIconElement;
@@ -184,6 +197,12 @@ declare namespace LocalJSX {
         "chain"?: string;
         "height"?: string;
         "width"?: string;
+    }
+    interface ChainSelector {
+        /**
+          * chain name to render
+         */
+        "chain"?: string;
     }
     interface EthereumSvg {
     }
@@ -260,6 +279,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "arbitrum-svg": ArbitrumSvg;
         "chain-icon": ChainIcon;
+        "chain-selector": ChainSelector;
         "ethereum-svg": EthereumSvg;
         "pacts-button": PactsButton;
         "pacts-icon": PactsIcon;
@@ -276,6 +296,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "arbitrum-svg": LocalJSX.ArbitrumSvg & JSXBase.HTMLAttributes<HTMLArbitrumSvgElement>;
             "chain-icon": LocalJSX.ChainIcon & JSXBase.HTMLAttributes<HTMLChainIconElement>;
+            "chain-selector": LocalJSX.ChainSelector & JSXBase.HTMLAttributes<HTMLChainSelectorElement>;
             "ethereum-svg": LocalJSX.EthereumSvg & JSXBase.HTMLAttributes<HTMLEthereumSvgElement>;
             "pacts-button": LocalJSX.PactsButton & JSXBase.HTMLAttributes<HTMLPactsButtonElement>;
             "pacts-icon": LocalJSX.PactsIcon & JSXBase.HTMLAttributes<HTMLPactsIconElement>;
