@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/PactsTech/pacts-components/compare/v1.2.0...v1.3.0) (2024-05-18)
+
+
+### Features
+
+* add chain-selector component for multiple chains ([25c54ef](https://github.com/PactsTech/pacts-components/commit/25c54efb83ed17e7ab90cdc0278e38c940c89ed6))
+
+
+
+
+
 # [1.2.0](https://github.com/PactsTech/pacts-components/compare/v1.1.2...v1.2.0) (2024-05-18)
 
 
