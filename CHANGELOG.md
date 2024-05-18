@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/PactsTech/pacts-components/compare/v1.1.0...v1.1.1) (2024-05-18)
+
+
+### Bug Fixes
+
+* add react build ([60a2941](https://github.com/PactsTech/pacts-components/commit/60a294130893ebae5d1373ce7761ff6f78b057d9))
+
+
+
+
+
 # 1.1.0 (2024-05-18)
 
 
