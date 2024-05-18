@@ -1,7 +1,14 @@
 import { Component, Event, EventEmitter, Host, Method, Prop, h } from '@stencil/core';
 import { MetaMaskInpageProvider } from '@metamask/providers';
 import * as chains from 'viem/chains';
-import { Address, TransactionReceipt, createPublicClient, createWalletClient, custom, publicActions } from 'viem';
+import {
+  Address,
+  TransactionReceipt,
+  createPublicClient,
+  createWalletClient,
+  custom,
+  publicActions
+} from 'viem';
 import { getProcessor, setupOrder, submitOrder } from '@pactstech/pacts-viem';
 import { TransactionError } from '../../types/types';
 
@@ -87,6 +94,10 @@ export class PactsButton {
       const transport = custom(window.ethereum);
       const publicClient = createPublicClient({ chain, transport });
       const walletClient = createWalletClient({ chain, transport }).extend(publicActions);
+      const chainId = await publicClient.getChainId();
+      if (chainId !== chain.id) {
+        await walletClient.switchChain({ id: chain.id });
+      }
       const processor = getProcessor({ address: this.address, client: walletClient });
       const price = BigInt(this.price);
       const shipping = BigInt(this.shipping);

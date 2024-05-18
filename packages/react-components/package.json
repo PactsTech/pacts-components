@@ -22,7 +22,7 @@
     "dist"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "scripts": {
     "test": "node ./__tests__/react-library.test.js",

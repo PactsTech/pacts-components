@@ -58,6 +58,18 @@ export namespace Components {
          */
         "token": string;
     }
+    interface PactsIcon {
+        /**
+          * Size of the pacts font
+         */
+        "fontSize": string;
+        /**
+          * Size for the pacts icon
+         */
+        "iconSize": string;
+    }
+    interface PactsSvg {
+    }
     interface TokenIcon {
         /**
           * The name of the token used in the order processor
@@ -113,6 +125,18 @@ declare global {
         prototype: HTMLPactsButtonElement;
         new (): HTMLPactsButtonElement;
     };
+    interface HTMLPactsIconElement extends Components.PactsIcon, HTMLStencilElement {
+    }
+    var HTMLPactsIconElement: {
+        prototype: HTMLPactsIconElement;
+        new (): HTMLPactsIconElement;
+    };
+    interface HTMLPactsSvgElement extends Components.PactsSvg, HTMLStencilElement {
+    }
+    var HTMLPactsSvgElement: {
+        prototype: HTMLPactsSvgElement;
+        new (): HTMLPactsSvgElement;
+    };
     interface HTMLTokenIconElement extends Components.TokenIcon, HTMLStencilElement {
     }
     var HTMLTokenIconElement: {
@@ -142,6 +166,8 @@ declare global {
         "chain-icon": HTMLChainIconElement;
         "ethereum-svg": HTMLEthereumSvgElement;
         "pacts-button": HTMLPactsButtonElement;
+        "pacts-icon": HTMLPactsIconElement;
+        "pacts-svg": HTMLPactsSvgElement;
         "token-icon": HTMLTokenIconElement;
         "usdc-svg": HTMLUsdcSvgElement;
         "usdt-svg": HTMLUsdtSvgElement;
@@ -207,6 +233,18 @@ declare namespace LocalJSX {
          */
         "token"?: string;
     }
+    interface PactsIcon {
+        /**
+          * Size of the pacts font
+         */
+        "fontSize"?: string;
+        /**
+          * Size for the pacts icon
+         */
+        "iconSize"?: string;
+    }
+    interface PactsSvg {
+    }
     interface TokenIcon {
         /**
           * The name of the token used in the order processor
@@ -224,6 +262,8 @@ declare namespace LocalJSX {
         "chain-icon": ChainIcon;
         "ethereum-svg": EthereumSvg;
         "pacts-button": PactsButton;
+        "pacts-icon": PactsIcon;
+        "pacts-svg": PactsSvg;
         "token-icon": TokenIcon;
         "usdc-svg": UsdcSvg;
         "usdt-svg": UsdtSvg;
@@ -238,6 +278,8 @@ declare module "@stencil/core" {
             "chain-icon": LocalJSX.ChainIcon & JSXBase.HTMLAttributes<HTMLChainIconElement>;
             "ethereum-svg": LocalJSX.EthereumSvg & JSXBase.HTMLAttributes<HTMLEthereumSvgElement>;
             "pacts-button": LocalJSX.PactsButton & JSXBase.HTMLAttributes<HTMLPactsButtonElement>;
+            "pacts-icon": LocalJSX.PactsIcon & JSXBase.HTMLAttributes<HTMLPactsIconElement>;
+            "pacts-svg": LocalJSX.PactsSvg & JSXBase.HTMLAttributes<HTMLPactsSvgElement>;
             "token-icon": LocalJSX.TokenIcon & JSXBase.HTMLAttributes<HTMLTokenIconElement>;
             "usdc-svg": LocalJSX.UsdcSvg & JSXBase.HTMLAttributes<HTMLUsdcSvgElement>;
             "usdt-svg": LocalJSX.UsdtSvg & JSXBase.HTMLAttributes<HTMLUsdtSvgElement>;

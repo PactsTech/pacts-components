@@ -8,17 +8,35 @@
 
   <script type="module" src="/build/stencil-components.esm.js"></script>
   <script nomodule src="/build/stencil-components.js"></script>
+  <style>
+    .is-flex {
+      display: flex;
+      gap: 10px;
+    }
+
+    .flex-dir-row {
+      flex-direction: row;
+    }
+
+    .pacts-button-container {
+      height: 5rem;
+      width: 5rem;
+    }
+  </style>
 </head>
 
 <body>
-  <div style="height: 5rem; width: 5rem;">
-    <pacts-button id="pactsButton" token="usdc" chain-icon-size="2rem" />
-  </div>
-  <div style="height: 5rem; width: 5rem;">
-    <pacts-button token="usdt" chain="arbitrum" chain-icon-size="2rem" />
-  </div>
-  <div style="height: 5rem; width: 5rem;">
-    <pacts-button token="wbtc" chain="ethereum" chain-icon-size="1.5rem" />
+  <div class="is-flex flex-dir-row">
+    <div class="pacts-button-container">
+      <pacts-button id="pactsButton" token="usdc" chain="arbitrum" chain-icon-size="2rem" />
+    </div>
+    <div class="pacts-button-container">
+      <pacts-button token="usdt" chain="arbitrum" chain-icon-size="2rem" />
+    </div>
+    <div class="pacts-button-container">
+      <pacts-button token="wbtc" chain="arbitrum" chain-icon-size="2rem" />
+    </div>
+    <pacts-icon />
   </div>
 </body>
 
