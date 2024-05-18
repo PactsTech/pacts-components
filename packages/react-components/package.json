@@ -29,6 +29,9 @@
     "build": "npm run tsc",
     "tsc": "tsc -p . --outDir ./dist"
   },
+  "dependencies": {
+    "@pactstech/stencil-components": "^1.1.0"
+  },
   "devDependencies": {
     "@types/react": "^18.2.79",
     "react": "^18.2.0",
