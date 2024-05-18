@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "release": "npx lerna publish --conventional-commits --yes",
+    "release": "npx lerna publish --force-publish --conventional-commits --yes",
     "start-stencil": "npm run start -w @pactstech/stencil-components",
     "build-stencil": "npm run build -w @pactstech/stencil-components",
     "build-react": "npm run build -w @pactstech/react-components"
