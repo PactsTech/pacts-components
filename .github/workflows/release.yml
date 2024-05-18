@@ -27,7 +27,7 @@ jobs:
     - name: ConfigureGit
       run: |
         git config --global user.email "ci@pacts.tech"
-        git config --global user.name "@$GITHUB_ACTOR"
+        git config --global user.name "ci@$GITHUB_ACTOR"
     - name: CheckUser
       run: npm whoami
     - name: SetupNpmRc
