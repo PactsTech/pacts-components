@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/PactsTech/pacts-components/compare/v1.4.0...v1.5.0) (2024-05-21)
+
+
+### Features
+
+* add icon size props ([3fdfa42](https://github.com/PactsTech/pacts-components/commit/3fdfa42cec46e5920e568474d653969a94ac0dd4))
+
+
+
+
+
 # [1.4.0](https://github.com/PactsTech/pacts-components/compare/v1.3.0...v1.4.0) (2024-05-21)
 
 
