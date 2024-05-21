@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/PactsTech/pacts-components/compare/v1.3.0...v1.4.0) (2024-05-21)
+
+
+### Features
+
+* add icon container and row components ([7062f67](https://github.com/PactsTech/pacts-components/commit/7062f6715471493f66ebbcedd187a8e46ddd1035))
+
+
+
+
+
 # [1.3.0](https://github.com/PactsTech/pacts-components/compare/v1.2.0...v1.3.0) (2024-05-18)
 
 **Note:** Version bump only for package @pactstech/react-components
