@@ -9,12 +9,12 @@
 
 ### Used by
 
- - [chain-icon](../chain-icon)
+ - [icon-container](../icon-container)
 
 ### Graph
 ```mermaid
 graph TD;
-  chain-icon --> arbitrum-svg
+  icon-container --> arbitrum-svg
   style arbitrum-svg fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

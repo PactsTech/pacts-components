@@ -9,12 +9,12 @@
 
 ### Used by
 
- - [pacts-icon](../pacts-icon)
+ - [icon-container](../icon-container)
 
 ### Graph
 ```mermaid
 graph TD;
-  pacts-icon --> pacts-svg
+  icon-container --> pacts-svg
   style pacts-svg fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

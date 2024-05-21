@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.token-icon {
+  display: flex;
+  align-items: center;
+}
+
+.token-name {
+  text-transform: uppercase;
+}
+
+.link-wrapper {
+  margin-left: auto;
+}

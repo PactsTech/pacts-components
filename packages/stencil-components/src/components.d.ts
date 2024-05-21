@@ -5,68 +5,28 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Address, TransactionReceipt } from "viem";
-export { Address, TransactionReceipt } from "viem";
 export namespace Components {
     interface ArbitrumSvg {
-    }
-    interface ChainIcon {
-        /**
-          * The name of the chain for the order processor
-         */
-        "chain": string;
     }
     interface ChainSelector {
         /**
           * Chain names to render
          */
         "chains": string;
-        /**
-          * Size of the icon above text
-         */
-        "iconSize": string;
     }
     interface EthereumSvg {
     }
-    interface PactsButton {
+    interface IconContainer {
         /**
-          * The address of the order processor
+          * The name of the icon to display
          */
-        "address": Address;
+        "icon": string;
         /**
-          * The name of the chain for the order processor
+          * size of the icon
          */
-        "chain": string;
-        /**
-          * Size for the chain icon
-         */
-        "chainIconSize": string;
-        /**
-          * Public metadata to associate with the order
-         */
-        "metadata": string;
-        /**
-          * The order id to use
-         */
-        "orderId"?: string;
-        /**
-          * Price of the order in token units
-         */
-        "price": string;
-        /**
-          * Shipping cost of the order in token units
-         */
-        "shipping": string;
-        /**
-          * Called to submit orders when button is clicked
-         */
-        "submitOrder": () => Promise<void>;
-        /**
-          * The token of the currency for the order processor
-         */
-        "token": string;
+        "size": string;
     }
-    interface PactsIcon {
+    interface PactsLink {
         /**
           * Size of the pacts font
          */
@@ -76,13 +36,17 @@ export namespace Components {
          */
         "iconSize": string;
     }
-    interface PactsSvg {
-    }
-    interface TokenIcon {
+    interface PactsRow {
         /**
-          * The name of the token used in the order processor
+          * Size for the pacts icon
+         */
+        "iconSize": string;
+        /**
+          * Token name to display
          */
         "token": string;
+    }
+    interface PactsSvg {
     }
     interface UsdcSvg {
     }
@@ -91,22 +55,12 @@ export namespace Components {
     interface WbtcSvg {
     }
 }
-export interface PactsButtonCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLPactsButtonElement;
-}
 declare global {
     interface HTMLArbitrumSvgElement extends Components.ArbitrumSvg, HTMLStencilElement {
     }
     var HTMLArbitrumSvgElement: {
         prototype: HTMLArbitrumSvgElement;
         new (): HTMLArbitrumSvgElement;
-    };
-    interface HTMLChainIconElement extends Components.ChainIcon, HTMLStencilElement {
-    }
-    var HTMLChainIconElement: {
-        prototype: HTMLChainIconElement;
-        new (): HTMLChainIconElement;
     };
     interface HTMLChainSelectorElement extends Components.ChainSelector, HTMLStencilElement {
     }
@@ -120,42 +74,29 @@ declare global {
         prototype: HTMLEthereumSvgElement;
         new (): HTMLEthereumSvgElement;
     };
-    interface HTMLPactsButtonElementEventMap {
-        "submissionStarted": any;
-        "submissionSucceeded": TransactionReceipt;
-        "submissionErrored": Error;
+    interface HTMLIconContainerElement extends Components.IconContainer, HTMLStencilElement {
     }
-    interface HTMLPactsButtonElement extends Components.PactsButton, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLPactsButtonElementEventMap>(type: K, listener: (this: HTMLPactsButtonElement, ev: PactsButtonCustomEvent<HTMLPactsButtonElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLPactsButtonElementEventMap>(type: K, listener: (this: HTMLPactsButtonElement, ev: PactsButtonCustomEvent<HTMLPactsButtonElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
-    }
-    var HTMLPactsButtonElement: {
-        prototype: HTMLPactsButtonElement;
-        new (): HTMLPactsButtonElement;
+    var HTMLIconContainerElement: {
+        prototype: HTMLIconContainerElement;
+        new (): HTMLIconContainerElement;
     };
-    interface HTMLPactsIconElement extends Components.PactsIcon, HTMLStencilElement {
+    interface HTMLPactsLinkElement extends Components.PactsLink, HTMLStencilElement {
     }
-    var HTMLPactsIconElement: {
-        prototype: HTMLPactsIconElement;
-        new (): HTMLPactsIconElement;
+    var HTMLPactsLinkElement: {
+        prototype: HTMLPactsLinkElement;
+        new (): HTMLPactsLinkElement;
+    };
+    interface HTMLPactsRowElement extends Components.PactsRow, HTMLStencilElement {
+    }
+    var HTMLPactsRowElement: {
+        prototype: HTMLPactsRowElement;
+        new (): HTMLPactsRowElement;
     };
     interface HTMLPactsSvgElement extends Components.PactsSvg, HTMLStencilElement {
     }
     var HTMLPactsSvgElement: {
         prototype: HTMLPactsSvgElement;
         new (): HTMLPactsSvgElement;
-    };
-    interface HTMLTokenIconElement extends Components.TokenIcon, HTMLStencilElement {
-    }
-    var HTMLTokenIconElement: {
-        prototype: HTMLTokenIconElement;
-        new (): HTMLTokenIconElement;
     };
     interface HTMLUsdcSvgElement extends Components.UsdcSvg, HTMLStencilElement {
     }
@@ -177,13 +118,12 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "arbitrum-svg": HTMLArbitrumSvgElement;
-        "chain-icon": HTMLChainIconElement;
         "chain-selector": HTMLChainSelectorElement;
         "ethereum-svg": HTMLEthereumSvgElement;
-        "pacts-button": HTMLPactsButtonElement;
-        "pacts-icon": HTMLPactsIconElement;
+        "icon-container": HTMLIconContainerElement;
+        "pacts-link": HTMLPactsLinkElement;
+        "pacts-row": HTMLPactsRowElement;
         "pacts-svg": HTMLPactsSvgElement;
-        "token-icon": HTMLTokenIconElement;
         "usdc-svg": HTMLUsdcSvgElement;
         "usdt-svg": HTMLUsdtSvgElement;
         "wbtc-svg": HTMLWbtcSvgElement;
@@ -192,71 +132,25 @@ declare global {
 declare namespace LocalJSX {
     interface ArbitrumSvg {
     }
-    interface ChainIcon {
-        /**
-          * The name of the chain for the order processor
-         */
-        "chain"?: string;
-    }
     interface ChainSelector {
         /**
           * Chain names to render
          */
         "chains"?: string;
-        /**
-          * Size of the icon above text
-         */
-        "iconSize"?: string;
     }
     interface EthereumSvg {
     }
-    interface PactsButton {
+    interface IconContainer {
         /**
-          * The address of the order processor
+          * The name of the icon to display
          */
-        "address"?: Address;
+        "icon"?: string;
         /**
-          * The name of the chain for the order processor
+          * size of the icon
          */
-        "chain"?: string;
-        /**
-          * Size for the chain icon
-         */
-        "chainIconSize"?: string;
-        /**
-          * Public metadata to associate with the order
-         */
-        "metadata"?: string;
-        /**
-          * Event emitted when order submission errors
-         */
-        "onSubmissionErrored"?: (event: PactsButtonCustomEvent<Error>) => void;
-        /**
-          * Event emitted when order submission starts
-         */
-        "onSubmissionStarted"?: (event: PactsButtonCustomEvent<any>) => void;
-        /**
-          * Event emitted when order submission succeeds
-         */
-        "onSubmissionSucceeded"?: (event: PactsButtonCustomEvent<TransactionReceipt>) => void;
-        /**
-          * The order id to use
-         */
-        "orderId"?: string;
-        /**
-          * Price of the order in token units
-         */
-        "price"?: string;
-        /**
-          * Shipping cost of the order in token units
-         */
-        "shipping"?: string;
-        /**
-          * The token of the currency for the order processor
-         */
-        "token"?: string;
+        "size"?: string;
     }
-    interface PactsIcon {
+    interface PactsLink {
         /**
           * Size of the pacts font
          */
@@ -266,13 +160,17 @@ declare namespace LocalJSX {
          */
         "iconSize"?: string;
     }
-    interface PactsSvg {
-    }
-    interface TokenIcon {
+    interface PactsRow {
         /**
-          * The name of the token used in the order processor
+          * Size for the pacts icon
+         */
+        "iconSize"?: string;
+        /**
+          * Token name to display
          */
         "token"?: string;
+    }
+    interface PactsSvg {
     }
     interface UsdcSvg {
     }
@@ -282,13 +180,12 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "arbitrum-svg": ArbitrumSvg;
-        "chain-icon": ChainIcon;
         "chain-selector": ChainSelector;
         "ethereum-svg": EthereumSvg;
-        "pacts-button": PactsButton;
-        "pacts-icon": PactsIcon;
+        "icon-container": IconContainer;
+        "pacts-link": PactsLink;
+        "pacts-row": PactsRow;
         "pacts-svg": PactsSvg;
-        "token-icon": TokenIcon;
         "usdc-svg": UsdcSvg;
         "usdt-svg": UsdtSvg;
         "wbtc-svg": WbtcSvg;
@@ -299,13 +196,12 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "arbitrum-svg": LocalJSX.ArbitrumSvg & JSXBase.HTMLAttributes<HTMLArbitrumSvgElement>;
-            "chain-icon": LocalJSX.ChainIcon & JSXBase.HTMLAttributes<HTMLChainIconElement>;
             "chain-selector": LocalJSX.ChainSelector & JSXBase.HTMLAttributes<HTMLChainSelectorElement>;
             "ethereum-svg": LocalJSX.EthereumSvg & JSXBase.HTMLAttributes<HTMLEthereumSvgElement>;
-            "pacts-button": LocalJSX.PactsButton & JSXBase.HTMLAttributes<HTMLPactsButtonElement>;
-            "pacts-icon": LocalJSX.PactsIcon & JSXBase.HTMLAttributes<HTMLPactsIconElement>;
+            "icon-container": LocalJSX.IconContainer & JSXBase.HTMLAttributes<HTMLIconContainerElement>;
+            "pacts-link": LocalJSX.PactsLink & JSXBase.HTMLAttributes<HTMLPactsLinkElement>;
+            "pacts-row": LocalJSX.PactsRow & JSXBase.HTMLAttributes<HTMLPactsRowElement>;
             "pacts-svg": LocalJSX.PactsSvg & JSXBase.HTMLAttributes<HTMLPactsSvgElement>;
-            "token-icon": LocalJSX.TokenIcon & JSXBase.HTMLAttributes<HTMLTokenIconElement>;
             "usdc-svg": LocalJSX.UsdcSvg & JSXBase.HTMLAttributes<HTMLUsdcSvgElement>;
             "usdt-svg": LocalJSX.UsdtSvg & JSXBase.HTMLAttributes<HTMLUsdtSvgElement>;
             "wbtc-svg": LocalJSX.WbtcSvg & JSXBase.HTMLAttributes<HTMLWbtcSvgElement>;

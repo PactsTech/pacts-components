@@ -8,13 +8,12 @@ import type { JSX } from '@pactstech/stencil-components';
 
 
 export const ArbitrumSvg = /*@__PURE__*/createReactComponent<JSX.ArbitrumSvg, HTMLArbitrumSvgElement>('arbitrum-svg');
-export const ChainIcon = /*@__PURE__*/createReactComponent<JSX.ChainIcon, HTMLChainIconElement>('chain-icon');
 export const ChainSelector = /*@__PURE__*/createReactComponent<JSX.ChainSelector, HTMLChainSelectorElement>('chain-selector');
 export const EthereumSvg = /*@__PURE__*/createReactComponent<JSX.EthereumSvg, HTMLEthereumSvgElement>('ethereum-svg');
-export const PactsButton = /*@__PURE__*/createReactComponent<JSX.PactsButton, HTMLPactsButtonElement>('pacts-button');
-export const PactsIcon = /*@__PURE__*/createReactComponent<JSX.PactsIcon, HTMLPactsIconElement>('pacts-icon');
+export const IconContainer = /*@__PURE__*/createReactComponent<JSX.IconContainer, HTMLIconContainerElement>('icon-container');
+export const PactsLink = /*@__PURE__*/createReactComponent<JSX.PactsLink, HTMLPactsLinkElement>('pacts-link');
+export const PactsRow = /*@__PURE__*/createReactComponent<JSX.PactsRow, HTMLPactsRowElement>('pacts-row');
 export const PactsSvg = /*@__PURE__*/createReactComponent<JSX.PactsSvg, HTMLPactsSvgElement>('pacts-svg');
-export const TokenIcon = /*@__PURE__*/createReactComponent<JSX.TokenIcon, HTMLTokenIconElement>('token-icon');
 export const UsdcSvg = /*@__PURE__*/createReactComponent<JSX.UsdcSvg, HTMLUsdcSvgElement>('usdc-svg');
 export const UsdtSvg = /*@__PURE__*/createReactComponent<JSX.UsdtSvg, HTMLUsdtSvgElement>('usdt-svg');
 export const WbtcSvg = /*@__PURE__*/createReactComponent<JSX.WbtcSvg, HTMLWbtcSvgElement>('wbtc-svg');

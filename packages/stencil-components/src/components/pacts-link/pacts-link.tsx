@@ -1,11 +1,11 @@
 import { Component, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: 'pacts-icon',
-  styleUrl: 'pacts-icon.css',
+  tag: 'pacts-link',
+  styleUrl: 'pacts-link.css',
   shadow: true,
 })
-export class PactsIcon {
+export class PactsLink {
   /**
    * Size for the pacts icon
    */
@@ -18,8 +18,8 @@ export class PactsIcon {
 
   render() {
     return (
-      <a class="icon-link" href='https://pacts.tech' target='_blank'>
-        <pacts-svg style={{ height: this.iconSize, width: this.iconSize }} />
+      <a class='icon-link' href='https://pacts.tech' target='_blank'>
+        <icon-container icon='pacts' size={this.iconSize} />
         &nbsp;
         <span style={{ fontSize: this.fontSize }}>Pacts</span>
       </a>

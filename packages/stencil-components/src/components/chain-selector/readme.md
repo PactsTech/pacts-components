@@ -7,24 +7,27 @@
 
 ## Properties
 
-| Property   | Attribute   | Description                 | Type     | Default     |
-| ---------- | ----------- | --------------------------- | -------- | ----------- |
-| `chains`   | `chains`    | Chain names to render       | `string` | `undefined` |
-| `iconSize` | `icon-size` | Size of the icon above text | `string` | `'5rem'`    |
+| Property | Attribute | Description           | Type     | Default     |
+| -------- | --------- | --------------------- | -------- | ----------- |
+| `chains` | `chains`  | Chain names to render | `string` | `undefined` |
 
 
 ## Dependencies
 
 ### Depends on
 
-- [chain-icon](../chain-icon)
+- [icon-container](../icon-container)
 
 ### Graph
 ```mermaid
 graph TD;
-  chain-selector --> chain-icon
-  chain-icon --> arbitrum-svg
-  chain-icon --> ethereum-svg
+  chain-selector --> icon-container
+  icon-container --> pacts-svg
+  icon-container --> arbitrum-svg
+  icon-container --> ethereum-svg
+  icon-container --> usdc-svg
+  icon-container --> usdt-svg
+  icon-container --> wbtc-svg
   style chain-selector fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

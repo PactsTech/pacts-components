@@ -1,4 +1,4 @@
-import { Component, Prop, Host, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 import * as chains from 'viem/chains';
 
 @Component({
@@ -12,36 +12,24 @@ export class ChainSelector {
    */
   @Prop() chains: string;
 
-  /**
-   * Size of the icon above text
-   */
-  @Prop() iconSize = '5rem';
-
   render() {
     const chains = this.chains.split(',');
     return (
-      <Host>
-        <div class='row center-xs'>
-          {chains.map((chainName) => {
-            const chain = this.getChain(chainName);
-            return (
-              <div class='col-xs'>
-                <chain-icon chain={chainName} style={{
-                  display: 'block',
-                  margin: 'auto',
-                  height: this.iconSize,
-                  width: this.iconSize
-                }} />
-                <div class='row center-xs'>
-                  <div class='col-xs'>
-                    <span>{chain.name}</span>
-                  </div>
+      <div class='row center-xs'>
+        {chains.map((chainName) => {
+          const chain = this.getChain(chainName);
+          return (
+            <div class='col-xs'>
+              <icon-container icon={chainName} style={{ margin: 'auto' }} />
+              <div class='row center-xs'>
+                <div class='col-xs'>
+                  <span>{chain.name}</span>
                 </div>
               </div>
-            );
-          })}
-        </div>
-      </Host>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 

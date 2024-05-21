@@ -15,15 +15,26 @@
 
 ## Dependencies
 
+### Used by
+
+ - [pacts-row](../pacts-row)
+
 ### Depends on
 
-- [pacts-svg](../pacts-svg)
+- [icon-container](../icon-container)
 
 ### Graph
 ```mermaid
 graph TD;
-  pacts-icon --> pacts-svg
-  style pacts-icon fill:#f9f,stroke:#333,stroke-width:4px
+  pacts-link --> icon-container
+  icon-container --> pacts-svg
+  icon-container --> arbitrum-svg
+  icon-container --> ethereum-svg
+  icon-container --> usdc-svg
+  icon-container --> usdt-svg
+  icon-container --> wbtc-svg
+  pacts-row --> pacts-link
+  style pacts-link fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
