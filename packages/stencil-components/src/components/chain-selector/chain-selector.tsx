@@ -12,6 +12,11 @@ export class ChainSelector {
    */
   @Prop() chains: string;
 
+  /**
+   * Size of chain icons
+   */
+  @Prop() iconSize = '4rem';
+
   render() {
     const chains = this.chains.split(',');
     return (
@@ -20,7 +25,7 @@ export class ChainSelector {
           const chain = this.getChain(chainName);
           return (
             <div class='col-xs'>
-              <icon-container icon={chainName} style={{ margin: 'auto' }} />
+              <icon-container icon={chainName} size={this.iconSize} style={{ margin: 'auto' }} />
               <div class='row center-xs'>
                 <div class='col-xs'>
                   <span>{chain.name}</span>

@@ -21,7 +21,7 @@ export class PactsRow {
     return (
       <div class='container'>
         <div class='token-icon'>
-          <icon-container icon={this.token} />
+          <icon-container icon={this.token} size={this.iconSize} />
           &nbsp;
           <span class='token-name'>{this.token}</span>
         </div>
