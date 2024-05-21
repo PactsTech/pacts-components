@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description           | Type     | Default     |
-| -------- | --------- | --------------------- | -------- | ----------- |
-| `chains` | `chains`  | Chain names to render | `string` | `undefined` |
+| Property   | Attribute   | Description           | Type     | Default     |
+| ---------- | ----------- | --------------------- | -------- | ----------- |
+| `chains`   | `chains`    | Chain names to render | `string` | `undefined` |
+| `iconSize` | `icon-size` | Size of chain icons   | `string` | `'4rem'`    |
 
 
 ## Dependencies

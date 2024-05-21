@@ -13,6 +13,10 @@ export namespace Components {
           * Chain names to render
          */
         "chains": string;
+        /**
+          * Size of chain icons
+         */
+        "iconSize": string;
     }
     interface EthereumSvg {
     }
@@ -137,6 +141,10 @@ declare namespace LocalJSX {
           * Chain names to render
          */
         "chains"?: string;
+        /**
+          * Size of chain icons
+         */
+        "iconSize"?: string;
     }
     interface EthereumSvg {
     }

@@ -58,9 +58,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@metamask/providers": "^16.0.0",
-    "@pactstech/pacts-viem": "^10.0.0",
-    "abitype": "^1.0.2",
-    "viem": "^2.9.27"
+    "viem": "^2.11.1"
   }
 }
