@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/ionic-team/stencil-component-starter/compare/v1.5.0...v1.6.0) (2024-05-24)
+
+
+### Features
+
+* add chain selected event ([4c4ae2a](https://github.com/ionic-team/stencil-component-starter/commit/4c4ae2a07c837d1429ef1415df1a416f9ad5e5a0))
+
+
+
+
+
 # [1.5.0](https://github.com/ionic-team/stencil-component-starter/compare/v1.4.0...v1.5.0) (2024-05-21)
 
 
