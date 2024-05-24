@@ -10,6 +10,10 @@ export namespace Components {
     }
     interface ChainSelector {
         /**
+          * The current active chain
+         */
+        "activeChain"?: string;
+        /**
           * Chain names to render
          */
         "chains": string;
@@ -59,6 +63,10 @@ export namespace Components {
     interface WbtcSvg {
     }
 }
+export interface ChainSelectorCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLChainSelectorElement;
+}
 declare global {
     interface HTMLArbitrumSvgElement extends Components.ArbitrumSvg, HTMLStencilElement {
     }
@@ -66,7 +74,18 @@ declare global {
         prototype: HTMLArbitrumSvgElement;
         new (): HTMLArbitrumSvgElement;
     };
+    interface HTMLChainSelectorElementEventMap {
+        "chainSelected": number;
+    }
     interface HTMLChainSelectorElement extends Components.ChainSelector, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLChainSelectorElementEventMap>(type: K, listener: (this: HTMLChainSelectorElement, ev: ChainSelectorCustomEvent<HTMLChainSelectorElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLChainSelectorElementEventMap>(type: K, listener: (this: HTMLChainSelectorElement, ev: ChainSelectorCustomEvent<HTMLChainSelectorElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLChainSelectorElement: {
         prototype: HTMLChainSelectorElement;
@@ -138,6 +157,10 @@ declare namespace LocalJSX {
     }
     interface ChainSelector {
         /**
+          * The current active chain
+         */
+        "activeChain"?: string;
+        /**
           * Chain names to render
          */
         "chains"?: string;
@@ -145,6 +168,10 @@ declare namespace LocalJSX {
           * Size of chain icons
          */
         "iconSize"?: string;
+        /**
+          * Event emitted when chain is selected
+         */
+        "onChainSelected"?: (event: ChainSelectorCustomEvent<number>) => void;
     }
     interface EthereumSvg {
     }
