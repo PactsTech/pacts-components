@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class AvalancheSvg {
   render() {
     return (
-      <svg xmlns='http://www.w3.org/2000/svg' fill='none'>
+      <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 1504 1504'>
         <path fill='#fff' d='M287 258h928v844H287z' />
         <path
           fill='#E84142'

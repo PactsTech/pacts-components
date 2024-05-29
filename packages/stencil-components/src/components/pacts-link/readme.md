@@ -29,7 +29,12 @@ graph TD;
   pacts-link --> icon-container
   icon-container --> pacts-svg
   icon-container --> arbitrum-svg
+  icon-container --> avalanche-svg
+  icon-container --> base-svg
+  icon-container --> bsc-svg
+  icon-container --> polygon-svg
   icon-container --> ethereum-svg
+  icon-container --> dai-svg
   icon-container --> usdc-svg
   icon-container --> usdt-svg
   icon-container --> wbtc-svg

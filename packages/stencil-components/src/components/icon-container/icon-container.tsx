@@ -26,8 +26,18 @@ export class IconContainer {
             case 'arbitrum':
             case 'arbitrumSepolia':
               return <arbitrum-svg key='arbitrum' />;
+            case 'avalanche':
+              return <avalanche-svg key='avalanche' />;
+            case 'base':
+              return <base-svg key='base' />;
+            case 'bsc':
+              return <bsc-svg key='bsc' />;
+            case 'polygon':
+              return <polygon-svg key='polygon' />;
             case 'ethereum':
               return <ethereum-svg key='ethereum' />;
+            case 'dai':
+              return <dai-svg key='dai' />;
             case 'usdc':
               return <usdc-svg key='usdc' />;
             case 'usdt':

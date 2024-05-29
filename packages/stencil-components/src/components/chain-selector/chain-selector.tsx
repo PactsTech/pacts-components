@@ -34,6 +34,7 @@ export class ChainSelector {
       <div class='chain-selector'>
         {chains.map((chainName) => {
           const chain = this.getChain(chainName);
+          console.log({ chainName, chain });
           return (
             <div
               class={`chain${chainName === this.activeChain ? ' active-chain' : ''}`}

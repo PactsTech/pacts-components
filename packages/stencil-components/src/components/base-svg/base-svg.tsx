@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class BaseSvg {
   render() {
     return (
-      <svg xmlns='http://www.w3.org/2000/svg' fill='none'>
+      <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 146 146'>
         <circle cx={73} cy={73} r={73} fill='#0052FF' />
         <path
           fill='#fff'
