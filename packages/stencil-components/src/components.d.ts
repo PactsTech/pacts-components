@@ -8,6 +8,12 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ArbitrumSvg {
     }
+    interface AvalancheSvg {
+    }
+    interface BaseSvg {
+    }
+    interface BscSvg {
+    }
     interface ChainSelector {
         /**
           * The current active chain
@@ -21,6 +27,8 @@ export namespace Components {
           * Size of chain icons
          */
         "iconSize": string;
+    }
+    interface DaiSvg {
     }
     interface EthereumSvg {
     }
@@ -56,6 +64,8 @@ export namespace Components {
     }
     interface PactsSvg {
     }
+    interface PolygonSvg {
+    }
     interface UsdcSvg {
     }
     interface UsdtSvg {
@@ -74,6 +84,24 @@ declare global {
         prototype: HTMLArbitrumSvgElement;
         new (): HTMLArbitrumSvgElement;
     };
+    interface HTMLAvalancheSvgElement extends Components.AvalancheSvg, HTMLStencilElement {
+    }
+    var HTMLAvalancheSvgElement: {
+        prototype: HTMLAvalancheSvgElement;
+        new (): HTMLAvalancheSvgElement;
+    };
+    interface HTMLBaseSvgElement extends Components.BaseSvg, HTMLStencilElement {
+    }
+    var HTMLBaseSvgElement: {
+        prototype: HTMLBaseSvgElement;
+        new (): HTMLBaseSvgElement;
+    };
+    interface HTMLBscSvgElement extends Components.BscSvg, HTMLStencilElement {
+    }
+    var HTMLBscSvgElement: {
+        prototype: HTMLBscSvgElement;
+        new (): HTMLBscSvgElement;
+    };
     interface HTMLChainSelectorElementEventMap {
         "chainSelected": number;
     }
@@ -90,6 +118,12 @@ declare global {
     var HTMLChainSelectorElement: {
         prototype: HTMLChainSelectorElement;
         new (): HTMLChainSelectorElement;
+    };
+    interface HTMLDaiSvgElement extends Components.DaiSvg, HTMLStencilElement {
+    }
+    var HTMLDaiSvgElement: {
+        prototype: HTMLDaiSvgElement;
+        new (): HTMLDaiSvgElement;
     };
     interface HTMLEthereumSvgElement extends Components.EthereumSvg, HTMLStencilElement {
     }
@@ -121,6 +155,12 @@ declare global {
         prototype: HTMLPactsSvgElement;
         new (): HTMLPactsSvgElement;
     };
+    interface HTMLPolygonSvgElement extends Components.PolygonSvg, HTMLStencilElement {
+    }
+    var HTMLPolygonSvgElement: {
+        prototype: HTMLPolygonSvgElement;
+        new (): HTMLPolygonSvgElement;
+    };
     interface HTMLUsdcSvgElement extends Components.UsdcSvg, HTMLStencilElement {
     }
     var HTMLUsdcSvgElement: {
@@ -141,12 +181,17 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "arbitrum-svg": HTMLArbitrumSvgElement;
+        "avalanche-svg": HTMLAvalancheSvgElement;
+        "base-svg": HTMLBaseSvgElement;
+        "bsc-svg": HTMLBscSvgElement;
         "chain-selector": HTMLChainSelectorElement;
+        "dai-svg": HTMLDaiSvgElement;
         "ethereum-svg": HTMLEthereumSvgElement;
         "icon-container": HTMLIconContainerElement;
         "pacts-link": HTMLPactsLinkElement;
         "pacts-row": HTMLPactsRowElement;
         "pacts-svg": HTMLPactsSvgElement;
+        "polygon-svg": HTMLPolygonSvgElement;
         "usdc-svg": HTMLUsdcSvgElement;
         "usdt-svg": HTMLUsdtSvgElement;
         "wbtc-svg": HTMLWbtcSvgElement;
@@ -154,6 +199,12 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ArbitrumSvg {
+    }
+    interface AvalancheSvg {
+    }
+    interface BaseSvg {
+    }
+    interface BscSvg {
     }
     interface ChainSelector {
         /**
@@ -172,6 +223,8 @@ declare namespace LocalJSX {
           * Event emitted when chain is selected
          */
         "onChainSelected"?: (event: ChainSelectorCustomEvent<number>) => void;
+    }
+    interface DaiSvg {
     }
     interface EthereumSvg {
     }
@@ -207,6 +260,8 @@ declare namespace LocalJSX {
     }
     interface PactsSvg {
     }
+    interface PolygonSvg {
+    }
     interface UsdcSvg {
     }
     interface UsdtSvg {
@@ -215,12 +270,17 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "arbitrum-svg": ArbitrumSvg;
+        "avalanche-svg": AvalancheSvg;
+        "base-svg": BaseSvg;
+        "bsc-svg": BscSvg;
         "chain-selector": ChainSelector;
+        "dai-svg": DaiSvg;
         "ethereum-svg": EthereumSvg;
         "icon-container": IconContainer;
         "pacts-link": PactsLink;
         "pacts-row": PactsRow;
         "pacts-svg": PactsSvg;
+        "polygon-svg": PolygonSvg;
         "usdc-svg": UsdcSvg;
         "usdt-svg": UsdtSvg;
         "wbtc-svg": WbtcSvg;
@@ -231,12 +291,17 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "arbitrum-svg": LocalJSX.ArbitrumSvg & JSXBase.HTMLAttributes<HTMLArbitrumSvgElement>;
+            "avalanche-svg": LocalJSX.AvalancheSvg & JSXBase.HTMLAttributes<HTMLAvalancheSvgElement>;
+            "base-svg": LocalJSX.BaseSvg & JSXBase.HTMLAttributes<HTMLBaseSvgElement>;
+            "bsc-svg": LocalJSX.BscSvg & JSXBase.HTMLAttributes<HTMLBscSvgElement>;
             "chain-selector": LocalJSX.ChainSelector & JSXBase.HTMLAttributes<HTMLChainSelectorElement>;
+            "dai-svg": LocalJSX.DaiSvg & JSXBase.HTMLAttributes<HTMLDaiSvgElement>;
             "ethereum-svg": LocalJSX.EthereumSvg & JSXBase.HTMLAttributes<HTMLEthereumSvgElement>;
             "icon-container": LocalJSX.IconContainer & JSXBase.HTMLAttributes<HTMLIconContainerElement>;
             "pacts-link": LocalJSX.PactsLink & JSXBase.HTMLAttributes<HTMLPactsLinkElement>;
             "pacts-row": LocalJSX.PactsRow & JSXBase.HTMLAttributes<HTMLPactsRowElement>;
             "pacts-svg": LocalJSX.PactsSvg & JSXBase.HTMLAttributes<HTMLPactsSvgElement>;
+            "polygon-svg": LocalJSX.PolygonSvg & JSXBase.HTMLAttributes<HTMLPolygonSvgElement>;
             "usdc-svg": LocalJSX.UsdcSvg & JSXBase.HTMLAttributes<HTMLUsdcSvgElement>;
             "usdt-svg": LocalJSX.UsdtSvg & JSXBase.HTMLAttributes<HTMLUsdtSvgElement>;
             "wbtc-svg": LocalJSX.WbtcSvg & JSXBase.HTMLAttributes<HTMLWbtcSvgElement>;
