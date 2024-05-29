@@ -5,6 +5,7 @@
 
 .chain {
   display: flex;
+  text-align: center;
   flex-direction: column;
   cursor: pointer;
   padding: 1rem;
