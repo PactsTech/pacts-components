@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/PactsTech/pacts-components/compare/v1.6.0...v1.7.0) (2024-05-30)
+
+
+### Features
+
+* add coin svgs ([0380c1f](https://github.com/PactsTech/pacts-components/commit/0380c1f0c96a03bb48d1bda429341339435b8250))
+
+
+
+
+
 # [1.6.0](https://github.com/PactsTech/pacts-components/compare/v1.5.0...v1.6.0) (2024-05-24)
 
 **Note:** Version bump only for package @pactstech/react-components

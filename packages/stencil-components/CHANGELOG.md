@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/ionic-team/stencil-component-starter/compare/v1.6.0...v1.7.0) (2024-05-30)
+
+
+### Bug Fixes
+
+* center text horizontally ([2264631](https://github.com/ionic-team/stencil-component-starter/commit/2264631787948aa34f566583be17f54a032a0919))
+* issues with new icons ([976bd72](https://github.com/ionic-team/stencil-component-starter/commit/976bd727d631ea3f79d0e3ccc72848992d7c96d5))
+
+
+### Features
+
+* add coin svgs ([0380c1f](https://github.com/ionic-team/stencil-component-starter/commit/0380c1f0c96a03bb48d1bda429341339435b8250))
+
+
+
+
+
 # [1.6.0](https://github.com/ionic-team/stencil-component-starter/compare/v1.5.0...v1.6.0) (2024-05-24)
 
 
