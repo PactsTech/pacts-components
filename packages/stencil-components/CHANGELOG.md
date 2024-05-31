@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/ionic-team/stencil-component-starter/compare/v1.7.0...v1.8.0) (2024-05-31)
+
+
+### Features
+
+* add optimism support ([8058158](https://github.com/ionic-team/stencil-component-starter/commit/805815884bdb01b746c66cbb3084ef3a0670f0e0))
+
+
+
+
+
 # [1.7.0](https://github.com/ionic-team/stencil-component-starter/compare/v1.6.0...v1.7.0) (2024-05-30)
 
 
