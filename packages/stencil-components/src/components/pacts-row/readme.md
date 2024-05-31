@@ -30,6 +30,7 @@ graph TD;
   icon-container --> avalanche-svg
   icon-container --> base-svg
   icon-container --> bsc-svg
+  icon-container --> optimism-svg
   icon-container --> polygon-svg
   icon-container --> ethereum-svg
   icon-container --> dai-svg

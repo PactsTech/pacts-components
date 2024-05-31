@@ -15,6 +15,7 @@ export const ChainSelector = /*@__PURE__*/createReactComponent<JSX.ChainSelector
 export const DaiSvg = /*@__PURE__*/createReactComponent<JSX.DaiSvg, HTMLDaiSvgElement>('dai-svg');
 export const EthereumSvg = /*@__PURE__*/createReactComponent<JSX.EthereumSvg, HTMLEthereumSvgElement>('ethereum-svg');
 export const IconContainer = /*@__PURE__*/createReactComponent<JSX.IconContainer, HTMLIconContainerElement>('icon-container');
+export const OptimismSvg = /*@__PURE__*/createReactComponent<JSX.OptimismSvg, HTMLOptimismSvgElement>('optimism-svg');
 export const PactsLink = /*@__PURE__*/createReactComponent<JSX.PactsLink, HTMLPactsLinkElement>('pacts-link');
 export const PactsRow = /*@__PURE__*/createReactComponent<JSX.PactsRow, HTMLPactsRowElement>('pacts-row');
 export const PactsSvg = /*@__PURE__*/createReactComponent<JSX.PactsSvg, HTMLPactsSvgElement>('pacts-svg');

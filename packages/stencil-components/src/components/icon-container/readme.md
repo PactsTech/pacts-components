@@ -28,6 +28,7 @@
 - [avalanche-svg](../avalanche-svg)
 - [base-svg](../base-svg)
 - [bsc-svg](../bsc-svg)
+- [optimism-svg](../optimism-svg)
 - [polygon-svg](../polygon-svg)
 - [ethereum-svg](../ethereum-svg)
 - [dai-svg](../dai-svg)
@@ -43,6 +44,7 @@ graph TD;
   icon-container --> avalanche-svg
   icon-container --> base-svg
   icon-container --> bsc-svg
+  icon-container --> optimism-svg
   icon-container --> polygon-svg
   icon-container --> ethereum-svg
   icon-container --> dai-svg

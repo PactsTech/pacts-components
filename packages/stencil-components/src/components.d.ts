@@ -42,6 +42,8 @@ export namespace Components {
          */
         "size": string;
     }
+    interface OptimismSvg {
+    }
     interface PactsLink {
         /**
           * Size of the pacts font
@@ -137,6 +139,12 @@ declare global {
         prototype: HTMLIconContainerElement;
         new (): HTMLIconContainerElement;
     };
+    interface HTMLOptimismSvgElement extends Components.OptimismSvg, HTMLStencilElement {
+    }
+    var HTMLOptimismSvgElement: {
+        prototype: HTMLOptimismSvgElement;
+        new (): HTMLOptimismSvgElement;
+    };
     interface HTMLPactsLinkElement extends Components.PactsLink, HTMLStencilElement {
     }
     var HTMLPactsLinkElement: {
@@ -188,6 +196,7 @@ declare global {
         "dai-svg": HTMLDaiSvgElement;
         "ethereum-svg": HTMLEthereumSvgElement;
         "icon-container": HTMLIconContainerElement;
+        "optimism-svg": HTMLOptimismSvgElement;
         "pacts-link": HTMLPactsLinkElement;
         "pacts-row": HTMLPactsRowElement;
         "pacts-svg": HTMLPactsSvgElement;
@@ -238,6 +247,8 @@ declare namespace LocalJSX {
          */
         "size"?: string;
     }
+    interface OptimismSvg {
+    }
     interface PactsLink {
         /**
           * Size of the pacts font
@@ -277,6 +288,7 @@ declare namespace LocalJSX {
         "dai-svg": DaiSvg;
         "ethereum-svg": EthereumSvg;
         "icon-container": IconContainer;
+        "optimism-svg": OptimismSvg;
         "pacts-link": PactsLink;
         "pacts-row": PactsRow;
         "pacts-svg": PactsSvg;
@@ -298,6 +310,7 @@ declare module "@stencil/core" {
             "dai-svg": LocalJSX.DaiSvg & JSXBase.HTMLAttributes<HTMLDaiSvgElement>;
             "ethereum-svg": LocalJSX.EthereumSvg & JSXBase.HTMLAttributes<HTMLEthereumSvgElement>;
             "icon-container": LocalJSX.IconContainer & JSXBase.HTMLAttributes<HTMLIconContainerElement>;
+            "optimism-svg": LocalJSX.OptimismSvg & JSXBase.HTMLAttributes<HTMLOptimismSvgElement>;
             "pacts-link": LocalJSX.PactsLink & JSXBase.HTMLAttributes<HTMLPactsLinkElement>;
             "pacts-row": LocalJSX.PactsRow & JSXBase.HTMLAttributes<HTMLPactsRowElement>;
             "pacts-svg": LocalJSX.PactsSvg & JSXBase.HTMLAttributes<HTMLPactsSvgElement>;

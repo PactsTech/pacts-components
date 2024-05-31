@@ -32,6 +32,8 @@ export class IconContainer {
               return <base-svg key='base' />;
             case 'bsc':
               return <bsc-svg key='bsc' />;
+            case 'optimism':
+              return <optimism-svg key='optimism' />;
             case 'polygon':
               return <polygon-svg key='polygon' />;
             case 'ethereum':
