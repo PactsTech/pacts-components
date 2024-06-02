@@ -1,4 +1,4 @@
 pacts-components
 ==============
 
-Monorepo containing various Pacts buttons for easy pacts integrations.
+Monorepo containing various Pacts buttons for pacts integrations.

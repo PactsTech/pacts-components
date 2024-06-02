@@ -1,11 +1,3 @@
-# `@pactstech/react-components`
+# @pactstech/react-components
 
-> TODO: description
-
-## Usage
-
-```
-const reactComponents = require('@pactstech/react-components');
-
-// TODO: DEMONSTRATE API
-```
+React components for Pacts utilities.
