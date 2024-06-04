@@ -8,7 +8,7 @@
     "crypto",
     "pactstech"
   ],
-  "author": "Jake Breindel <j.breindel2@outlook.com>",
+  "author": "Jake Breindel",
   "homepage": "",
   "license": "MIT",
   "main": "dist/index.js",
