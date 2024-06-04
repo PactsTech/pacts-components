@@ -1,6 +1,6 @@
 {
   "name": "@pactstech/react-components",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "description": "pacts react components",
   "keywords": [
     "pacts",
@@ -30,7 +30,7 @@
     "tsc": "tsc -p . --outDir ./dist"
   },
   "dependencies": {
-    "@pactstech/stencil-components": "^1.8.2"
+    "@pactstech/stencil-components": "^1.8.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.79",
